@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+    <script type="text/javascript" src="../common/flatten.js"></script>
+    <script type="text/javascript" src="../common/initShader.js"></script>
+    <script type="text/javascript" src="../common/webgl-utils.js"></script>
+    <script type="x-shader/x-vertex" id="vertex-shader">
+        attribute vec4 vPositon;
+        void main(){
+            
+            gl_Position = vPositon;
+        }
+        
+    </script>
+    
+    <script type="x-shader/x-fragment" id="fragment-shader">
+        precision mediump float;
+        void main(){
+            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <canvas id="gl-canvas" width="512" height="512"></canvas>
+    <script type="text/javascript" src="js/triangle.js"></script>
+</body>
+</html>
